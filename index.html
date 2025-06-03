@@ -8,26 +8,34 @@
     body {
       font-family: sans-serif;
       background-color: #ffffff;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0;
       color: #333;
     }
-    header, footer {
+    header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
-    .gallery img {
+    header img {
       width: 100%;
-      max-width: 300px;
-      margin: 10px;
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px #ccc;
+      height: auto;
+      display: block;
+    }
+    .content {
+      padding: 20px;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px #ccc;
     }
     a.button {
       display: inline-block;
@@ -38,23 +46,33 @@
       text-decoration: none;
       border-radius: 8px;
     }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 0.9em;
+      color: #888;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="banner.png" alt="バナー画像">
+  </header>
+
+  <div class="content">
     <h1>SHCのゲーム紹介サイト</h1>
     <p>このサイトは、SHCが個人開発したスマホゲームを紹介するためのページです。<br>
     ゲームの情報を随時掲載していきます。</p>
-  </header>
 
-  <section class="gallery">
-    <img src="https://placehold.jp/300x200.png?text=Game+1" alt="Game 1">
-    <img src="https://placehold.jp/300x200.png?text=Game+2" alt="Game 2">
-    <img src="https://placehold.jp/300x200.png?text=Game+3" alt="Game 3">
-  </section>
+    <section class="gallery">
+      <img src="https://placehold.jp/300x200.png?text=Game+1" alt="Game 1">
+      <img src="https://placehold.jp/300x200.png?text=Game+2" alt="Game 2">
+      <img src="https://placehold.jp/300x200.png?text=Game+3" alt="Game 3">
+    </section>
 
-  <div style="text-align:center;">
-    <a href="game.html" class="button">ゲーム紹介ページへ</a>
+    <div style="text-align:center;">
+      <a href="game.html" class="button">ゲーム紹介ページへ</a>
+    </div>
   </div>
 
   <footer>
