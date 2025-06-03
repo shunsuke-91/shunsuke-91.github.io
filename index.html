@@ -8,28 +8,27 @@
     body {
       font-family: sans-serif;
       background-color: #ffffff;
-      max-width: 1000px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 0;
+      padding: 20px;
       color: #333;
     }
-    header {
+    header, footer {
       text-align: center;
-      margin-bottom: 20px;
-    }
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
+      margin-bottom: 30px;
     }
     .content {
-      padding: 20px;
+      text-align: center;
+    }
+    .content h1 {
+      margin-bottom: 10px;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
+      margin-top: 30px;
     }
     .gallery img {
       width: 100%;
@@ -37,18 +36,30 @@
       border-radius: 10px;
       box-shadow: 2px 2px 8px #ccc;
     }
-    a.button {
+    .button-image {
       display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #00aaff;
-      color: white;
-      text-decoration: none;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .button-image img {
+      width: 180px;
+      height: auto;
       border-radius: 8px;
+      box-shadow: 2px 2px 8px #aaa;
+      transition: transform 0.2s;
+    }
+    .button-image img:hover {
+      transform: scale(1.05);
+    }
+    .button-image a {
+      display: inline-block;
+      margin-top: 5px;
+      text-decoration: none;
+      color: #00aaff;
+      font-weight: bold;
     }
     footer {
-      text-align: center;
-      margin: 40px 0;
+      margin-top: 40px;
       font-size: 0.9em;
       color: #888;
     }
@@ -56,24 +67,24 @@
 </head>
 <body>
   <header>
-    <img src="banner.png" alt="バナー画像">
-  </header>
-
-  <div class="content">
     <h1>SHCのゲーム紹介サイト</h1>
     <p>このサイトは、SHCが個人開発したスマホゲームを紹介するためのページです。<br>
     ゲームの情報を随時掲載していきます。</p>
+  </header>
 
-    <section class="gallery">
-      <img src="https://placehold.jp/300x200.png?text=Game+1" alt="Game 1">
-      <img src="https://placehold.jp/300x200.png?text=Game+2" alt="Game 2">
-      <img src="https://placehold.jp/300x200.png?text=Game+3" alt="Game 3">
-    </section>
-
-    <div style="text-align:center;">
-      <a href="game.html" class="button">ゲーム紹介ページへ</a>
+  <div class="content">
+    <h2>◯ゲーム紹介ページ</h2>
+    <div class="button-image">
+      <a href="game.html">
+        <img src="game_button.png" alt="ゲーム紹介ボタン">
+      </a>
     </div>
   </div>
+
+  <section class="gallery">
+    <img src="https://placehold.jp/300x200.png?text=Game+1" alt="Game 1">
+    <img src="https://placehold.jp/300x200.png?text=Game+2" alt="Game 2">
+  </section>
 
   <footer>
     &copy; 2025 SHC
